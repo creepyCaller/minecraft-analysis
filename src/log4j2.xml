@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <!-- 这是设置某个包的级别 -->
+        <Logger name="net.minecraft" level="trace"/>
+        <!-- 这个配置默认日志级别 :例如你指定warn,那么它输出warn,error 和fatal级别的日志
+             trace,
+             debug,
+             info,
+             warn,
+             error,
+             fatal
+        -->
+        <!-- 这是设置默认的日志级别 -->
+        <Root level="warn">
+            <AppenderRef ref="Console"/>
+        </Root>
+    </Loggers>
+</Configuration>
